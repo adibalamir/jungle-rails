@@ -12,7 +12,7 @@
   <% overall_rating = 0.0 %>
   <% product.reviews.each {|review| overall_rating += review.rating} %>
   <% overall_rating = (overall_rating / product.reviews.size) %>
-  <p><strong>Overall rating:</strong> <%= overall_rating %></p>
+  <p><strong>Overall rating:</strong> <%= overall_rating.round(1) %></p>
   <% end %>
   <footer class="actions">
     <%= link_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary', method: :put do %>
