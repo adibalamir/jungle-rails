@@ -82,11 +82,11 @@ ActiveRecord::Schema.define(version: 20180720153952) do
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
+    t.string   "last_name"
     t.string   "email"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "last_name"
   end
 
   add_foreign_key "line_items", "orders"
